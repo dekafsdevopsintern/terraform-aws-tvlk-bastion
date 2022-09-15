@@ -37,6 +37,7 @@ module "aws-autoscaling_bastion_asg" {
 
 
   asg_vpc_zone_identifier       = data.aws_subnet_ids.subnet.ids
+  asg_desired_capacity          = var.asg_capacity
   asg_min_capacity              = var.asg_capacity
   asg_max_capacity              = var.asg_capacity
   asg_health_check_grace_period = var.asg_health_check_grace_period

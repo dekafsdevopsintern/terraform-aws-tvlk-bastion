@@ -7,11 +7,12 @@ module "aws-autoscaling_bastion_asg" {
   cluster_role   = local.role
   environment    = var.environment
 
-  application = local.application
-  description = var.description
-  user_data   = var.user_data
-  volume_size = var.volume_size
-  volume_type = var.volume_type
+  application    = local.application
+  description    = var.description
+  user_data      = var.user_data
+  volume_size    = var.volume_size
+  volume_type    = var.volume_type
+  ebs_encryption = var.ebs_encryption
 
   launch_template_overrides    = var.launch_template_overrides
   mixed_instances_distribution = var.mixed_instances_distribution

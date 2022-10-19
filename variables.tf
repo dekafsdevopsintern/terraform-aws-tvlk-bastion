@@ -1,3 +1,8 @@
+variable "ebs_encryption" {
+  description = "Whether the volume will be encrypted or not"
+  default     = "false"
+}
+
 variable "ebs_optimized" {
   description = "whether ec2 instance using ebs optimized or not"
   default     = "false"
